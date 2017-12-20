@@ -9,7 +9,7 @@ stage('Nexusupload') {
 }
 stage('Deploy to QA') {
         //download latest Version from Nexus and install on QA
-        build 'Deploy to QA'
+        build 'Deploy-to-QA'
 }
 
 stage('UFT-Test') {
