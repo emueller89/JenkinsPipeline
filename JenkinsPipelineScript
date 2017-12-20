@@ -22,4 +22,31 @@ stage('Last-Test') {
         build 'DE_Lasttest'
 }
 
-// build 'DE_Lasttest'
+stage('Deploy to Prod-A') {
+        //download latest Version from Nexus and install on Prod-A
+        build 'Deploy-to-Prod-A'
+}
+
+stage('UFT-Test-Prod-A') {
+        //Run UFT-Test on Prod-A
+        build 'UFT-Test-Prod-A'
+}
+
+stage('Last-Test-Prod-A') {
+        //Run Load-Test on Prod-A
+        build 'DE_Lasttest-Prod-A'
+}
+stage('Deploy to Prod-B') {
+        //download latest Version from Nexus and install on Prod-B
+        build 'Deploy-to-Prod-B'
+}
+
+stage('UFT-Test-Prod-B') {
+        //Run UFT-Test on Prod-B
+        build 'UFT-Test-Prod-B'
+}
+
+stage('Last-Test') {
+        //Run Load-Test on Prod-B
+        build 'DE_Lasttest-Prod-B'
+}
