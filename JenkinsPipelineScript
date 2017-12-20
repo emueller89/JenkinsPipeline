@@ -19,7 +19,7 @@ stage('UFT-Test') {
 
 stage('Last-Test') {
         //Run Load-Test on QA
-        build 'DE_Lasttest'
+        build 'DE-Lasttest'
 }
 
 stage('Deploy to Prod-A') {
@@ -34,7 +34,7 @@ stage('UFT-Test-Prod-A') {
 
 stage('Last-Test-Prod-A') {
         //Run Load-Test on Prod-A
-        build 'DE_Lasttest-Prod-A'
+        build 'DE-Lasttest-Prod-A'
 }
 stage('Deploy to Prod-B') {
         //download latest Version from Nexus and install on Prod-B
@@ -48,5 +48,5 @@ stage('UFT-Test-Prod-B') {
 
 stage('Last-Test') {
         //Run Load-Test on Prod-B
-        build 'DE_Lasttest-Prod-B'
+        build 'DE-Lasttest-Prod-B'
 }
