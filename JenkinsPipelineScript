@@ -32,10 +32,10 @@ stage('UFT-Test-Prod-A') {
         build 'UFT-Test-Prod-A'
 }
 
-stage('Last-Test-Prod-A') {
+//stage('Last-Test-Prod-A') {
         //Run Load-Test on Prod-A
-        build 'DE-Lasttest-Prod-A'
-}
+//        build 'DE-Lasttest-Prod-A'
+//}
 stage('Deploy to Prod-B') {
         //download latest Version from Nexus and install on Prod-B
         build 'Deploy-to-Prod-B'
@@ -46,7 +46,7 @@ stage('UFT-Test-Prod-B') {
         build 'UFT-Test-Prod-B'
 }
 
-stage('Last-Test') {
+//stage('Last-Test') {
         //Run Load-Test on Prod-B
         build 'DE-Lasttest-Prod-B'
-}
+//}
